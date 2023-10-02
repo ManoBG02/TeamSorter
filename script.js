@@ -28,9 +28,9 @@ function generateTeams() {
 
     const teamsDiv = document.getElementById("teams");
     teamsDiv.innerHTML = `
-        <h2>Team 1:</h2>
+        <h2 class="team team1">Team 1:</h2>
         <ul>${team1.map(player => `<li>${player}</li>`).join('')}</ul>
-        <h2>Team 2:</h2>
+        <h2 class="team team2">Team 2:</h2>
         <ul>${team2.map(player => `<li>${player}</li>`).join('')}</ul>
     `;
 }

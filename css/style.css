@@ -11,7 +11,7 @@ body {
 .container {
     text-align: center;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     width: 80%; /* Set a fixed width for better centering */
@@ -27,8 +27,18 @@ body {
 
 label {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: px;
     display: block;
+}
+
+/* Remove up and down arrows from number input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    appearance: textfield;
 }
 
 input[type="number"], input[type="text"] {
@@ -56,32 +66,51 @@ button:hover {
 
 .teams-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Align teams next to each other */
     margin-top: 20px;
 }
 
 .team {
-    flex-basis: 45%;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f0f0f0;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: fit-content;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.team.team1 {
+    background-color: #3498db;
+    color: white;
+    margin-top: 5px; /* Adjust margin-top to reduce space between Team 1 box and player names */
+}
+
+.team.team2 {
+    background-color: #e74c3c;
+    color: white;
+    margin-top: 10px; /* You can adjust margin-top for Team 2 box as well if needed */
 }
 
 ul {
-    list-style-type: none;
     padding: 0;
 }
-
+/* Increase font size for player names */
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+    font-size: 1.2rem; /* Increase font size for player names */
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 5px; /* Reduce padding to make the footer smaller */
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 1.2rem; /* Reduce font size for the footer text */
 }
